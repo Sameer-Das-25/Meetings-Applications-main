@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meetings</title>
+    <script src="js/services/check-auth.js"></script>
+    <link rel="stylesheet" href="external/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="external/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/pages/meeting.css" />
+    <link rel="stylesheet" href="css/pages/meetings-add-meetings.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-ele-grid">
+        <div class="ele-grid list-unstyle menu left-menu">
+          <div class="d-lg-none display-inline">
+            <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <div class="nav-items d-sm-none  float-left">
+            <a href="calender.html" class="link-plain items">Calender</a>
+          </div>
+          <div class="nav-items d-sm-none curr-page float-left">
+            <a href="meetings-add-meetings.html" class="link-plain items">Meetings</a>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="teams.html" class="link-plain items">Teams</a>
+          </div>
+        </div>
+        <div class="ele-grid list-unstyle menu right-menu">
+          <div class="nav-items d-sm-none float-right">
+            <a class="link-plain items" id="log-out">logout</a>
+          </div>
+          <div class="nav-items d-sm-none float-right">
+            <a href="" class="link-plain items" id="loged-in-user"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="mb-1">Meetings</h1>
+      <hr />
+      <div class="sub-title">
+        <div><a href="meetings-filter-meetings.html" class="link-plain">Filter/Search meetings</a></div>
+        <div class="selected-sub-title"><a href="meetings-add-meetings.html" class="link-plain">Add a meeting</a></div>
+      </div>
+      <hr class='meeting-hr'>
+      <div class="add-section bg-primary mt-1 mb-3">
+        <h2 class="mb-1">Add a new meeting</h2>
+        <hr />
+        <form method="post" id="add-meetings">
+          <div>
+            <div>
+              <label for="name">Name of the meeting</label>
+            </div>
+            <div>
+              <input type="text" id="name" name="name" class="add-block" placeholder="AWS training sessions" />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="date">Date</label>
+            </div>
+            <div>
+              <input type="date" id="date" name="date" class="add-block" />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="start-time">Start time (hh:mm AM/PM)</label>
+            </div>
+            <div>
+              <input type="time" id="start-time" name="startTime" class="time-block" />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="end-time">End time (hh:mm AM/PM)</label>
+            </div>
+            <div>
+              <input type="time" id="end-time" name="endTime" class="time-block" />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="description">Description</label>
+            </div>
+            <div>
+              <textarea
+                rows="3"
+                cols="100%"
+                name="description"
+                id="description"
+                class="add-block"
+                placeholder="What is the agenda of the meeting ?"
+              ></textarea>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="attendees">EmailID's of attendees, or team's short</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="attendees"
+                name="attendees"
+                class="add-block"
+                placeholder="john@example.com, @teamname"
+              />
+              <div><span>Seprate emailId's/team short names by commas- team short names always begin with @</span></div>
+            </div>
+          </div>
+
+          <div>
+            <input type="submit" value="Add meeting" class="submit-button btn btn-primary"  />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/pages/add-meeting.js"></script>
+  </body>
+</html>

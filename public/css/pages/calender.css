@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+.calender-block {
+  width: 20%;
+  border: 1px solid lightgray;
+  font-size: 14px;
+  padding: 6px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.today-date-Cal-div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.calender-details {
+  width: 89%;
+  margin: 0 auto;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.calender-details .meeting-detail-div {
+  width: 97%;
+  margin: 0px auto;
+  height: 60px;
+  background-color: rgba(83, 182, 240, 0.733);
+}
+
+.hours-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 1% 5px 0;
+}
+.block-time {
+  width: 15px;
+  font-size: 0.9em;
+}
+.timer-guider {
+  width: 90%;
+}
+
+.meeting-time-container {
+  display: grid;
+}
+
+.time-guider,
+.main-meeting-details-div {
+  grid-area: 1 / 1;
+}
+
+.main-meeting-details-div {
+  display: grid;
+}
+.meeing-guider {
+  grid-area: 1 / 1;
+}
+
+.meeing-guider .meeting-detail-div {
+  background-color: rgba(255, 255, 255, 0.733);
+  padding: 5px;
+  border: 1px solid rgb(164, 161, 161);
+  border-radius: 1px;
+  display: inline-block;
+
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+
+  box-shadow: 10px 10px 30px rgb(250, 250, 250) inset;
+}
+.meeing-guider .meeting-detail-div hr {
+  border-bottom: 12px;
+  background-color: rgb(153, 153, 160);
+  margin: 5px 0;
+}

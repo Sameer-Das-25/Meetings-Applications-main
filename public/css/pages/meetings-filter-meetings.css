@@ -1,0 +1,42 @@
+.selected-sub-title {
+  background-color: white;
+    border: 0.14em solid lightgray;
+    border-bottom: none;
+    border-radius: 0px ;
+}
+.sub-title .selected-sub-title a {
+  color: black;
+}
+.dropdown-menus {
+  width: 104%;
+}
+.meeting-date {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.meeting-time {
+  font-size: 0.9em;
+}
+.search-result {
+  border: 1px solid lightgray;
+  padding: 0.5em 1em;
+  border-radius: 0px;
+}
+.select-members {
+  padding: 8px;
+}
+
+.select-mem-div .btn {
+  padding: 10px;
+}
+
+::placeholder {
+    color: rgb(19, 20, 19);
+    opacity: 0.5;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}

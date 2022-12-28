@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter meetings</title>
+    <script src="js/services/check-auth.js"></script>
+    <link rel="stylesheet" href="external/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="external/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/pages/meeting.css" />
+    <link rel="stylesheet" href="css/pages/meetings-filter-meetings.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-ele-grid">
+        <div class="ele-grid list-unstyle menu left-menu">
+          <div class="d-lg-none display-inline">
+            <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="calender.html" class="link-plain items">Calender</a>
+          </div>
+          <div class="nav-items d-sm-none curr-page float-left">
+            <a href="meetings-add-meetings.html" class="link-plain items">Meetings</a>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="teams.html" class="link-plain items">Teams</a>
+          </div>
+        </div>
+        <div class="ele-grid list-unstyle menu right-menu">
+          <div class="nav-items d-sm-none float-right">
+            <a class="link-plain items" id="log-out">logout</a>
+          </div>
+          <div class="nav-items d-sm-none float-right">
+            <a href="" class="link-plain items" id="loged-in-user"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="mb-1">Meetings</h1>
+      <hr />
+      <div class="sub-title">
+        <div class="selected-sub-title">
+          <a href="meetings-filter-meetings.html" class="link-plain">Filter/Search meetings</a>
+        </div>
+        <div><a href="meetings-add-meetings.html" class="link-plain">Add a meeting</a></div>
+      </div>
+      <hr class='meeting-hr'>
+      <div class="add-section bg-primary mt-1">
+        <h2 class="mb-1">Search For meetings</h2>
+        <hr />
+        <form action="#" id="filter-meetings" method="post">
+          <div>
+            <div>
+              <label for="period">Date</label>
+            </div>
+            <div class="dropdown-menus">
+              <select name="period" id="period" class="add-block add-block-filter">
+                <option value="all">ALL</option>
+                <option value="past">PAST</option>
+                <option value="present">TODAY</option>
+                <option value="future">UPCOMING</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <label for="search">Search for</label>
+            </div>
+            <div>
+              <textarea
+                rows="3"
+                cols="100%"
+                name="search"
+                id="search"
+                class="add-block"
+                placeholder="Search using words describe the meeting"
+              ></textarea>
+            </div>
+          </div>
+
+          <div>
+            <input type="submit" value="Search" class="submit-button" />
+          </div>
+        </form>
+      </div>
+      <h2>Meetings matching search criteria</h2>
+      <hr />
+      <div id="filter-meeting-details">
+        <form method="post" id="add-member-to-meeting-${id}" class="add-member-to-meeting"></form>
+        <form method="post" id="add-member-to-meeting-${id}" class="add-member-to-meeting"></form>
+        <!-- <div class="search-result my-2">
+          <div class="mb-1">
+            <span class="meeting-date">12 September 2020 </span>
+            <span class="meeting-time">06:00 - 07:00</span>
+          </div>
+          <div class="meeting-name">Project Kickoff</div>
+          <div class="mb-2"><button class="btn btn-danger" id="excuse-yourself">Excuse yourself</button></div>
+          <hr />
+          <div class="attendees mb-1">
+            <span class="font-bold">Attendees:</span>
+            sachin@example.com, jane@example.com
+          </div>
+
+          <div class="select-mem-div">
+            <input list="members" name="members" class="select-members" placeholder="Select members" />
+            <datalist id="members">
+              <option value="sachin@example.com"></option>
+              <option value="sameer@example.com"></option>
+              <option value="xyz@fynd.com"></option>
+            </datalist>
+
+            <input type="submit" value="Add" class="btn-primary btn select-members" />
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/pages/filer-meetings.js"></script>
+  </body>
+</html>

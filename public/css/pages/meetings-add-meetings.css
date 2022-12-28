@@ -1,0 +1,21 @@
+.selected-sub-title{
+    background-color: white;
+    border: 0.14em solid lightgray;
+    border-bottom: none;
+    border-radius: 0;
+    
+  }
+  .sub-title .selected-sub-title a {
+    color: black;
+    
+  }
+  ::placeholder {
+    color: rgb(19, 20, 19);
+    opacity: 0.5;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}

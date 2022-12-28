@@ -1,0 +1,72 @@
+
+.main-team-block{
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+
+.teams-info{
+   display: grid;
+   gap: 1.5em;
+   grid-template-columns: repeat(1, 1fr);  
+}
+
+.add-team-element{
+  width: 100%;
+  padding: 7px;
+  font-size: 0.9em;
+  margin-bottom: 0.7em;
+
+}
+
+.add-team-button{
+  width: 95%;
+  padding: 10px;
+  font-size: 0.9em;
+  margin-bottom: 0.7em;
+  margin-left: 2.5%;
+  
+}
+
+
+@media all and (min-width:678px){
+  .main-team-block{
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr;
+  }
+  .teams-info{
+    grid-template-columns: repeat(1, 1fr); 
+ }
+}
+@media all and (min-width:1030px){
+
+  .main-team-block{
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 2fr 1fr;
+  }
+  .teams-info{
+    grid-template-columns: repeat(2, 1fr); 
+ }
+ 
+}
+
+.content  {
+  border: 1px solid rgba(128, 128, 128, 0.722);
+  padding: 10px;
+  border-radius: 0px;
+}
+.content-title {
+  font-size: 1.4em;
+}
+.content div {
+  margin: 10px;
+}
+.select-members {
+  padding: 8px;
+}
+.select-mem-div .btn {
+  padding: 10px;
+}

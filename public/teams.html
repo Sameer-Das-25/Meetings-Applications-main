@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams</title>
+    <script src="js/services/check-auth.js"></script>
+    <link rel="stylesheet" href="external/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="external/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/pages/teams.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-ele-grid">
+        <div class="ele-grid list-unstyle menu left-menu">
+          <div class="d-lg-none display-inline">
+            <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="calender.html" class="link-plain items">Calender</a>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="meetings-add-meetings.html" class="link-plain items">Meetings</a>
+          </div>
+          <div class="nav-items d-sm-none curr-page float-left">
+            <a href="teams.html" class="link-plain items">Teams</a>
+          </div>
+        </div>
+        <div class="ele-grid list-unstyle menu right-menu">
+          <div class="nav-items d-sm-none float-right">
+            <a class="link-plain items" id="log-out">logout</a>
+          </div>
+          <div class="nav-items d-sm-none float-right">
+            <a href="" class="link-plain items" id="loged-in-user"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="mb-1">Teams</h1>
+      <hr />
+      <div class="text-gray font-bold my-2">View and edit teams you are part of</div>
+      <div class="main-team-block">
+        <div class="teams-info">
+          <!-- <div class="content">
+            <div class="content-title font-bold">Customer acquisition campaign</div>
+            <div class="font-bold">@customer-acquisition</div>
+            <div class="font-bold text-gray">Team to come up with strategies to win over customers by end of FY21</div>
+            <div class="mb-2"><button class="btn btn-danger" id="excuse-yourself">Excuse yourself</button></div>
+            <hr />
+            <div class="attendees mb-1">
+              <span class="font-bold">Attendees:</span>
+              sachin@example.com, jane@example.com
+            </div>
+            <div class="select-mem-div">
+              <input list="members" name="members" class="select-members" placeholder="Select members" />
+              <datalist id="members">
+                <option value="sachin@example.com"></option>
+                <option value="sameer@example.com"></option>
+                <option value="xyz@fynd.com"></option>
+              </datalist>
+
+              <input type="submit" value="Add" class="btn-primary btn select-members" />
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-title font-bold">MERN Stack training Bootcamp</div>
+            <div class="font-bold">@mern-stack-training</div>
+            <div class="font-bold text-gray">Group attending MERN stack training for website revamp project</div>
+            <div class="mb-2"><button class="btn btn-danger" id="excuse-yourself">Excuse yourself</button></div>
+            <hr />
+            <div class="attendees mb-1">
+              <span class="font-bold">Attendees:</span>
+              sachin@example.com, jane@example.com
+            </div>
+            <div class="select-mem-div">
+              <input list="members" name="members" class="select-members" placeholder="Select members" />
+              <datalist id="members">
+                <option value="sachin@example.com"></option>
+                <option value="sameer@example.com"></option>
+                <option value="xyz@fynd.com"></option>
+              </datalist>
+
+              <input type="submit" value="Add" class="btn-primary btn select-members" />
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-title font-bold">Customer acquisition campaign</div>
+            <div class="font-bold">@customer-acquisition</div>
+            <div class="font-bold text-gray">Team to come up with strategies to win over customers by end of FY21</div>
+            <div class="mb-2"><button class="btn btn-danger" id="excuse-yourself">Excuse yourself</button></div>
+            <hr />
+            <div class="attendees mb-1">
+              <span class="font-bold">Attendees:</span>
+              sachin@example.com, jane@example.com
+            </div>
+            <div class="select-mem-div">
+              <input list="members" name="members" class="select-members" placeholder="Select members" />
+              <datalist id="members">
+                <option value="sachin@example.com"></option>
+                <option value="sameer@example.com"></option>
+                <option value="xyz@fynd.com"></option>
+              </datalist>
+
+              <input type="submit" value="Add" class="btn-primary btn select-members" />
+            </div>
+          </div> -->
+        </div>
+        <div class="teams-form">
+          <div class="content bg-lightyellow">
+            <div class="content-title font-bold">Add new Team</div>
+            <form method="post" id="add-team-from">
+              <div class="">
+                <input type="text" name="team-name" placeholder="Team name" class="add-team-element" id="team-name" />
+              </div>
+              <div class="">
+                <input
+                  type="text"
+                  name="team-short-name"
+                  placeholder="Team short name"
+                  class="add-team-element"
+                  id="team-short-name"
+                />
+              </div>
+              <div>
+                <textarea
+                  rows="2"
+                  cols=""
+                  name="description"
+                  id="description"
+                  placeholder="Peovide a description for the team?"
+                  class="add-team-element"
+                ></textarea>
+              </div>
+              <hr />
+              <div class="attendees mb-1">
+                <span class="font-bold">Members:</span>
+                <div class="add-team-member-section" id="member-list"></div>
+              </div>
+              <div class="select-mem-div">
+                <input list="members" id="new-emails" class="select-members" placeholder="Select members" />
+                <datalist id="members"></datalist>
+                <button class="btn btn-primary" id="add-member-btn" >Add</button>
+              </div>
+              <input type="submit" value=" Add team" class="btn btn-primary add-team-button" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/pages/load-all-teams.js" type="module"></script>
+    <script src="js/pages/add-new-team.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+.sub-title {
+    display: flex;
+    flex-direction: row;
+}
+.meeting-hr {
+    border: none;
+    border-top: 0.14em solid lightgray;
+    position: relative;
+    bottom: 9.4px;
+    z-index: -111111;
+}
+.sub-title div {
+    padding: 10px;
+}
+.sub-title div a {
+    color: rgb(0, 60, 255);
+}
+.add-section {
+    font-size: 15px;
+    padding: 1px 20px 20px 20px;
+    border-radius: 0px;
+}
+.add-section div .add-block {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 1%;
+    border: 1px solid rgb(155, 152, 152);
+    border-radius: 0px;
+}
+.time-block {
+    margin: 10px auto;
+    padding: 9px 1%;
+    border: 1px solid rgb(155, 152, 152);
+    border-radius: 0px;
+}
+.submit-button {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(15, 116, 248);
+    color: white;
+    cursor: pointer;
+}
+.add-section div div span {
+    color: rgba(255, 255, 255, 0.993);
+}
+.submit-button:hover {
+    background-color: blue;
+}
+.submit-button:active {
+    background-color: rgb(61, 78, 104);
+}
+
+.dropdown-menus #period {
+    width: 96%;
+}

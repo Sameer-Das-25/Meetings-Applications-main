@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calender</title>
+    <script src="js/services/check-auth.js"></script>
+    <link rel="stylesheet" href="external/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="external/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/pages/calender.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-ele-grid">
+        <div class="ele-grid list-unstyle menu left-menu">
+          <div class="d-lg-none display-inline">
+            <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <div class="nav-items d-sm-none curr-page float-left">
+            <a href="calender.html" class="link-plain items">Calendar</a>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="meetings-add-meetings.html" class="link-plain items">Meetings</a>
+          </div>
+          <div class="nav-items d-sm-none float-left">
+            <a href="teams.html" class="link-plain items">Teams</a>
+          </div>
+        </div>
+        <div class="ele-grid list-unstyle menu right-menu">
+          <div class="nav-items d-sm-none float-right">
+            <a class="link-plain items" id="log-out">logout</a>
+          </div>
+          <div class="nav-items d-sm-none float-right">
+            <a href="" class="link-plain items" id="loged-in-user"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="mb-1">Calender</h1>
+      <hr />
+      <div class="today-date-Cal-div">
+        <h3 class="todays-date m-0" id="today-date"></h3>
+        <input type="date" id="myDate" value="2022-01-01" class="calender-block" onchange="handler(event);" />
+      </div>
+      <div class="text-gray font-bold" id="todays-day">Saturday</div>
+    </div>
+    <div class="calender-details meeting-time-container">
+      <div class="time-guider">
+        <div class="hours-block">
+          <div class="block-time">0</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">1</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">2</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">3</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">4</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">5</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">6</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">7</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">8</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">9</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">10</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">11</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">12</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">13</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">14</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">15</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">16</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">17</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">18</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">19</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">20</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">21</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">22</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+        <div class="hours-block">
+          <div class="block-time">23</div>
+          <div class="meeting-detail-div"></div>
+        </div>
+      </div>
+
+      <div class="main-meeting-details-div"></div>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/pages/calender.js"></script>
+  </body>
+</html>

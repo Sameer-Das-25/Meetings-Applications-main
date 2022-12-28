@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/utils.css" />
+        <link rel="stylesheet" href="css/pages/index.css" />
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class='circle'></div>
+            <div class="form-container">
+                <form action="login.html" method="post" id="register-form">
+                    <div>
+                        <div class="page-title">Sign up</div>
+                        <div class="mb-3 flex-j-between">
+                            <label for="username">Username : </label>
+                            <input type="text" id="username" name="username" placeholder="Jone_Doe" />
+                        </div>
+
+                        <div class="mb-3 flex-j-between">
+                            <label for="email">Email :</label>
+                            <input type="email" name="email" id="email" placeholder="jonn123@gmail.com" />
+                        </div>
+
+                        <div class="mb-3 flex-j-between">
+                            <label for="password">Password :</label>
+                            <input type="password" name="password" id="password" placeholder="Password" />
+                        </div>
+
+                        <div class="mb-3 flex-j-between">
+                            <label for="confirm-Password">Confirm Password : </label>
+                            <input
+                                type="password"
+                                name="Confirmpassword"
+                                id="confirm-Password"
+                                placeholder="Confirm password"
+                            />
+                        </div>
+
+                        <div>
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+                <div></div>
+                <div class="image-container">
+                    <img src="./assets/images/register.svg" alt="" width="80%" />
+                    <div class="image-container">
+                        Already have an account? <a href="login.html" class="secondary">
+                            <button class='m-1'>Sign in</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/pages/register.js"></script>
+    </body>
+</html>
